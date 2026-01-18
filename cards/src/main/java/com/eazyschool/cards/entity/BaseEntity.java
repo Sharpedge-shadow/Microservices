@@ -1,11 +1,13 @@
-package com.eazybank.accounts.entity;
+package com.eazyschool.cards.entity;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.context.annotation.Scope;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
@@ -20,19 +22,19 @@ import java.time.LocalDateTime;
 public class BaseEntity {
 
     @CreatedDate
-    @Column(updatable = false)
-    private LocalDateTime created_at;
+    @Column(name = "created_at",updatable=false)
+    private LocalDateTime createdAt;
 
     @CreatedBy
-    @Column(updatable = false)
-    private String created_by;
-
-    @LastModifiedBy
-    @Column(insertable = false)
-    private String updated_by;
+    @Column(name ="created_by",updatable=false)
+    private String createdBy;
 
     @LastModifiedDate
-    @Column(insertable = false)
-    private LocalDateTime updated_at;
+    @Column(name="updated_at",insertable = false)
+    private LocalDateTime updatedAt;
+
+    @LastModifiedBy
+    @Column(name="updated_by",insertable = false)
+    private String  updatedBy;
 
 }

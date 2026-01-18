@@ -1,11 +1,7 @@
-package com.eazybank.accounts.entity;
+package com.eazyschool.loans.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.EntityListeners;
-import jakarta.persistence.MappedSuperclass;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import jakarta.persistence.*;
+import lombok.*;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
@@ -16,23 +12,22 @@ import java.time.LocalDateTime;
 
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-@Getter @Setter @ToString
+@Getter @Setter @ToString @NoArgsConstructor @AllArgsConstructor
 public class BaseEntity {
 
     @CreatedDate
     @Column(updatable = false)
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 
     @CreatedBy
     @Column(updatable = false)
-    private String created_by;
-
-    @LastModifiedBy
-    @Column(insertable = false)
-    private String updated_by;
+    private String createdBy;
 
     @LastModifiedDate
     @Column(insertable = false)
-    private LocalDateTime updated_at;
+    private LocalDateTime updatedAt;
 
+    @LastModifiedBy
+    @Column(insertable = false)
+    private String updatedBy;
 }
