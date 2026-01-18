@@ -58,33 +58,33 @@ docker compose stop
 docker compose start
 
 
-docker images
-docker image inspect image_id
-docker build rm image_name
-docker build -t image_name
-docker run -p hostport:containerport image_name
-docker ps
-docker ps -a
-docker container start container_id
-docker container pause container_id
-docker container unpause container_id
-docker container stop container_id
-docker container kill container_id
-docker container restart container_id
-docker container inspect container_id
-docker container logs container_id
-docker container logs -f container_id
-docker rm container_id
-docker container prune 
-docker image push container_registry/username:tag
-docker image pull container_registry/username:tag
-docker image prune
-docker container stats
-docker system prune
-docker rmi image_id
-docker login -u username
-docker logout
-docker history image_name
-docker exec -it container_id sh
-docker compose up
-docker compose down
+docker images \
+docker image inspect image_id \
+docker build rm image_name \
+docker build -t image_name \
+docker run -p hostport:containerport image_name \
+docker ps \
+docker ps -a \
+docker container start container_id \
+docker container pause container_id \
+docker container unpause container_id \
+docker container stop container_id \
+docker container kill container_id \
+docker container restart container_id \
+docker container inspect container_id \
+docker container logs container_id \
+docker container logs -f container_id \
+docker rm container_id \
+docker container prune  \
+docker image push container_registry/username:tag \
+docker image pull container_registry/username:tag \
+docker image prune \
+docker container stats \
+docker system prune \
+docker rmi image_id \
+docker login -u username \
+docker logout \
+docker history image_name \
+docker exec -it container_id sh \
+docker compose up \
+docker compose down \
