@@ -88,3 +88,21 @@ docker history image_name \
 docker exec -it container_id sh \
 docker compose up \
 docker compose down \
+
+---------------15-factor cloud Methodology
+
+one codebase one application \
+API first \
+Dependency Management \
+Desgin Build release run\
+Configuration , credentials & code\
+LOgs\
+Disposability\
+Backing services\
+Environment parity\
+Administrative processes\
+Port binding\
+stateless processes\
+concurrency\
+Telemetry\
+Authentication & Authorization\
